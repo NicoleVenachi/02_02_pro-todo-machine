@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
 function useTodos() {
+  // el hook useTodos, usa el hook useLocalStorage
   const {
     item: todos,
     saveItem: saveTodos,
@@ -9,6 +10,8 @@ function useTodos() {
     loading,
     error,
   } = useLocalStorage('TODOS_V1', []);
+
+  //otros estados, de lo que busco y del modal
   const [searchValue, setSearchValue] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
 
